@@ -10,8 +10,18 @@
   </head>
   <body>
     <div class="turno-display">
-      <h1 class="numero-turno">01</h1>
-      <p class="texto-turno">Por favor, acérquese al mostrador</p>
+      <h1 id="numeroTurno" class="numero-turno"></h1>
+      <p id='textoTurno' class="texto-turno">Por favor, acérquese al mostrador</p>
+    </div>
+    <div id="botones" class="botones">
+      <button id="anterior">Anterior</button>
+      <button id="siguiente">Siguiente</button>
+      <button id="reset">Reset</button>
+    </div>
+    <div class="turno-personalizado">
+      <label for="turno-personalizado">Ingreses Turno:</label>
+      <input type="number" id="turno-personalizado">
+      <button id="ingresar-turno">Ingresar</button>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>

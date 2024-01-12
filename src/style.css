@@ -1,4 +1,5 @@
 .turno-display {
+  margin-top: 64px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,6 +22,14 @@
   font-weight: bold;
   margin: 0;
   text-align: center;
+}
+
+.botones {
+  padding-top: 32px;
+
+}
+.turno-personalizado {
+  padding-top: 32px;
 }
 
 :root {
@@ -51,6 +60,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
+  flex-direction: column;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
