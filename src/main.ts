@@ -10,10 +10,7 @@ const alertaDiv = document.getElementById('alerta');
 let turno: number = 0;
 
 const formatearPrefijo0 = (numero: number): string => {
-  if (numero.toString().length < 2) {
-    return `0${numero}`;
-  }
-  return numero.toString();
+  return numero.toString().padStart(2,"0")
 };
 
 const turnoSiguiente = (): void => {
