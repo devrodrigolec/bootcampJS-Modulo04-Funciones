@@ -32,8 +32,6 @@ const resetTurno = (): void => {
     numeroTurno.innerHTML = formatearPrefijo0(0);
 };
 
-
-
 const ingresarTurnoPersonalizado = (): void => {
   if (
     parseInt(inputTurnoPersonalizado.value) < 0 ||
@@ -47,7 +45,7 @@ const ingresarTurnoPersonalizado = (): void => {
     numeroTurno.innerHTML = formatearPrefijo0(
       parseInt(inputTurnoPersonalizado.value)
     );
-    alertaDiv?.classList.add('hidden');
+    alertaDiv?.classList.add("hidden");
     inputTurnoPersonalizado.value = "";
   }
 };
@@ -55,12 +53,24 @@ const ingresarTurnoPersonalizado = (): void => {
 if (numeroTurno !== undefined && numeroTurno !== null)
   numeroTurno.innerHTML = formatearPrefijo0(turno);
 
-if (botonSiguiente !== null && botonSiguiente !== undefined)
-  botonSiguiente.addEventListener("click", turnoSiguiente);
-if (botonAnterior !== null && botonAnterior !== undefined)
-  botonAnterior.addEventListener("click", turnoAnterior);
-if (botonReset !== null && botonReset !== undefined)
-  botonReset.addEventListener("click", resetTurno);
+if (botonSiguiente !== null && botonSiguiente !== undefined) {
+  if (botonSiguiente instanceof HTMLButtonElement) {
+    botonSiguiente.addEventListener("click", turnoSiguiente);
+  }
+}
+if (botonAnterior !== null && botonAnterior !== undefined) {
+  if (botonAnterior instanceof HTMLButtonElement) {
+    botonAnterior.addEventListener("click", turnoAnterior);
+  }
+}
+if (botonReset !== null && botonReset !== undefined) {
+  if (botonReset instanceof HTMLButtonElement) {
+    botonReset.addEventListener("click", resetTurno);
+  }
+}
 
-if (botonIngresarTurno !== null && botonIngresarTurno !== undefined)
-  botonIngresarTurno.addEventListener("click", ingresarTurnoPersonalizado);
+if (botonIngresarTurno !== null && botonIngresarTurno !== undefined) {
+  if (botonIngresarTurno instanceof HTMLButtonElement) {
+    botonIngresarTurno.addEventListener("click", ingresarTurnoPersonalizado);
+  }
+}
